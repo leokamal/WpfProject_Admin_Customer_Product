@@ -35,7 +35,7 @@ namespace Labb3Prog.Managers
         // Skicka detta efter att användarlistan ändrats eller lästs in
         public static event Action UserListChanged;
 
-        public static bool IsAdminLoggedIn => CurrentUser.Type == UserTypes.Admin;
+        public static bool IsAdminLoggedIn => CurrentUser?.Type == UserTypes.Admin;
        // public static bool IsCustomerLoggedIn => CurrentUser.Type == UserTypes.Customer;
 
         public static bool RegisterAdmin(string name, string password)
@@ -45,6 +45,7 @@ namespace Labb3Prog.Managers
                 return false;
 
             UserManager.Users.Add(new Admin(name, password));
+            UserListChanged?.Invoke();
 
             return true;
         }
@@ -55,6 +56,7 @@ namespace Labb3Prog.Managers
                 return false;
 
             UserManager.Users.Add(new Customer(name, password));
+            UserListChanged?.Invoke();
 
             return true;
         }
@@ -67,19 +69,29 @@ namespace Labb3Prog.Managers
 
             if (type == UserTypes.Customer)
                 _currentUser = new Customer(name, password);
+
+            CurrentUserChanged?.Invoke();
+
+
         }
 
 
         public static  User LogIn(string userName, string password)
         {
             User user = UserManager.Users.Where(u => u.Name == userName && u.Authenticate(password)).FirstOrDefault();
-           
+           if (user == null)
+                return null;
+
+            ChangeCurrentUser(user.Name, user.Password, user.Type);
+            CurrentUserChanged?.Invoke();
+
             return user;
         }
 
         public static void LogOut()
         {
-            throw new NotImplementedException();
+            _currentUser = null;
+            CurrentUserChanged?.Invoke();
         }
 
         public static async Task SaveUsersToFile()
@@ -88,18 +100,6 @@ namespace Labb3Prog.Managers
             {
                 string userFilePath =
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "users.json");
-                List<User> serializerUser = new List<User>();
-                foreach (var user in UserManager.Users)
-                {
-                  /*  if (user.Type == UserTypes.Admin)
-                    {
-                        serializerUser.Add( new Admin(user.Name, user.GetPassword()));
-                    }
-                    else if (user.Type == UserTypes.Customer)
-                    {
-                        serializerUser.Add(new Customer(user.Name, user.GetPassword()));
-                    }*/
-                }
                 using (StreamWriter writer = new StreamWriter(userFilePath))
                 {
                     string userJson = JsonConvert.SerializeObject(UserManager.Users, new StringEnumConverter());
@@ -119,7 +119,6 @@ namespace Labb3Prog.Managers
             {
                 string userFilePath =
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "users.json");
-
                 using (StreamReader reader = new StreamReader(userFilePath))
                 {
                     string userJson = await reader.ReadToEndAsync();

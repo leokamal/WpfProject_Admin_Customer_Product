@@ -14,27 +14,27 @@ namespace Labb3Prog.Managers
 
     public static class ProductManager
     {
-        private static IEnumerable<Product> _products = new List<Product>();
-        public static IEnumerable<Product> Products { get { return _products; } set { _products = value; } }
+        private static List<Product> _products = new List<Product>();
+        public static List<Product> Products { get { return _products; } set { _products = value; } }
         
 
         // Skicka detta efter att produktlistan ändrats eller lästs in
-        public static event Action ProductListChanged = OnProductListChange;
+        public  static  event Action ProductListChanged ;
 
         public static void AddProduct(Product product)
         {
-            _products.ToList().Add(product);
-            ProductListChanged?.Invoke();
+            Product p = Products.Where(s => s.Name == product.Name && s.Price == product.Price).FirstOrDefault();
+            if (p != null)
+                throw new Exception("this product is already exist!");
+            _products.Add(product);
+            OnProductListChange();
         }
-        public static void OnProductListChange()
-        {
-           MessageBox.Show("Change product List");
-
-        }
+        public  static void OnProductListChange() =>ProductListChanged?.Invoke();
 
         public static void RemoveProduct(Product product)
         {
-            _products.ToList().Remove(product);
+            _products.Remove(product);
+            OnProductListChange();
         }
 
         public static async Task SaveProductsToFile()

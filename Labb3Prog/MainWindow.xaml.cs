@@ -43,6 +43,10 @@ namespace Labb3Prog
                 AdminTab.Visibility = Visibility.Collapsed;
                 LoginTab.Visibility = Visibility.Collapsed;
             }
+            if(UserManager.CurrentUser == null)
+            {
+                Window_Loaded(new object(), new RoutedEventArgs());
+            }
         }
    
 
@@ -56,6 +60,10 @@ namespace Labb3Prog
         {
             await UserManager.LoadUsersFromFile();
             await ProductManager.LoadProductsFromFile();
+
+            AdminTab.Visibility = Visibility.Collapsed;
+            ShopTab.Visibility = Visibility.Collapsed;
+            LoginTab.Visibility = Visibility.Visible;
         }
     }
 }

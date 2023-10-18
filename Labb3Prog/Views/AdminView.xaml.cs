@@ -27,11 +27,19 @@ namespace Labb3Prog.Views
             InitializeComponent();
             UserManager.CurrentUserChanged += UserManager_CurrentUserChanged;
             this.ProdList.ItemsSource = ProductManager.Products;
+            ProductManager.ProductListChanged += OnProductListChanged;
+        }
+
+        private async void OnProductListChanged()
+        {
+            await ProductManager.SaveProductsToFile();
+            await ProductManager.LoadProductsFromFile();
+            this.ProdList.ItemsSource = ProductManager.Products;
         }
 
         private void UserManager_CurrentUserChanged()
         {
-            MessageBox.Show("Current User changed to : "+UserManager.CurrentUser.Name);
+           // MessageBox.Show("Current User changed to : "+UserManager.CurrentUser.Name);
         }
 
         private void ProdList_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -39,25 +47,34 @@ namespace Labb3Prog.Views
       //      MessageBox.Show(ProdList.SelectedItem.ToString());
         }
 
-        private void SaveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private async void SaveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Product product = new Product(txtProduct.Text.ToString(),double.Parse(txtPrice.Text.ToString()));
-            ProductManager.AddProduct(product);
-            this.ProdList.ItemsSource = ProductManager.Products;
+            try
+            {
+                ProductManager.AddProduct(product);
         }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message); 
+            }
+}
 
-        private void RemoveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private async void RemoveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            //Check if we are not Select a product;
+            if (this.ProdList.SelectedItem == null)
+                return;
+
             Product productSelected = (Product)ProdList.SelectedItem;
             MessageBox.Show(productSelected.Name);
-            ProductManager.RemoveProduct(productSelected);
-            this.ProdList.ItemsSource = ProductManager.Products;
-        }
+           
+                ProductManager.RemoveProduct(productSelected);
+            }
 
         private void LogoutBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            UserManager.CurrentUser = null;
-            MessageBox.Show("User " + UserManager.CurrentUser.Name + " Logged out");
+            UserManager.LogOut();
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)

@@ -37,3 +37,28 @@ D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\G
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.dll
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.pdb
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.xml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\AdminView.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\LoginView.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\App.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.lref
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe.config
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.pdb
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.dll
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.xml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.AssemblyReference.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.baml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\AdminView.baml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\LoginView.baml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.baml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.g.resources
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.Properties.Resources.resources
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.GenerateResource.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.CoreCompileInputs.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.CopyComplete
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.exe
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\myProject\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.pdb

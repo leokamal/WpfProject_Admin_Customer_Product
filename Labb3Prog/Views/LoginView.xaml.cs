@@ -28,11 +28,19 @@ namespace Labb3Prog.Views
         {
             InitializeComponent();
             UserManager.CurrentUserChanged += UserManager_CurrentUserChanged;
+            UserManager.UserListChanged += UserManager_UserListChanged;
+        }
+
+        private async void UserManager_UserListChanged()
+        {
+            await UserManager.SaveUsersToFile();
+            await UserManager.LoadUsersFromFile();
         }
 
         private void UserManager_CurrentUserChanged()
         {
-            MessageBox.Show("Current User changed to : " + UserManager.CurrentUser.Name);
+          // Current user changed
+                
         }
 
         private  void  LoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
