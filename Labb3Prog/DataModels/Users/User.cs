@@ -11,7 +11,7 @@ namespace Labb3Prog.DataModels.Users
     {
         public string Name { get; }
 
-        private string Password { get; }
+        public string Password { get; }
 
         public abstract UserTypes Type { get; }
 
@@ -25,5 +25,6 @@ namespace Labb3Prog.DataModels.Users
         {
             return Password.Equals(password);
         }
+    
     }
 }

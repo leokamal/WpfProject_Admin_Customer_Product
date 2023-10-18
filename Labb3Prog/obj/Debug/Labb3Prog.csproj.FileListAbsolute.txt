@@ -33,3 +33,7 @@ D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\V
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.g.cs
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\AdminView.baml
 D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.baml
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.dll
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.pdb
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Newtonsoft.Json.xml

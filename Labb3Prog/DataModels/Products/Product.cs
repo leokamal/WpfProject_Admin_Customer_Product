@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace Labb3Prog.DataModels.Products
 {
-    public abstract class Product
+    public class Product
     {
         public string Name { get; set; }
 
         public double Price { get; set; }
 
-        protected Product(string name, double price)
+        public Product(string name, double price)
         {
             Name = name;
             Price = price;
+        }
+        public override string ToString()
+        {
+            return Name + " -> " + Price + "$";
         }
     }
 }

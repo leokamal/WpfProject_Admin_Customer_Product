@@ -8,7 +8,7 @@
               Width="800"
             Height="450"
             FontSize="20">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="*" />
@@ -55,12 +55,12 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Label Content="Name" />
-            <TextBox Grid.Row="0" Grid.Column="1" />
+            <TextBox Name="txtProduct" Grid.Row="0" Grid.Column="1" />
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
                 Content="Price" />
-            <TextBox Grid.Row="1" Grid.Column="1" />
+            <TextBox Name="txtPrice" Grid.Row="1" Grid.Column="1" />
             <Button
                 Name="SaveBtn"
                 Grid.Row="2"

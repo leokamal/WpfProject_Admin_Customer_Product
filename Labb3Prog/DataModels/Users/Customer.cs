@@ -13,6 +13,7 @@ namespace Labb3Prog.DataModels.Users
 
         public Customer(string name, string password) : base(name, password)
         {
+            this.Type = UserTypes.Customer;
         }
 
 

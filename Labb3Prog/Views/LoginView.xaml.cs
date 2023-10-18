@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using Labb3Prog.Managers;
+using Labb3Prog.DataModels.Users;
 
 namespace Labb3Prog.Views
 {
@@ -22,7 +23,7 @@ namespace Labb3Prog.Views
     /// </summary>
     public partial class LoginView : UserControl
     {
-
+        
         public LoginView()
         {
             InitializeComponent();
@@ -31,22 +32,43 @@ namespace Labb3Prog.Views
 
         private void UserManager_CurrentUserChanged()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("Current User changed to : " + UserManager.CurrentUser.Name);
         }
 
-        private void LoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private  void  LoginBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            string loginName = this.LoginName.Text;
+            string loginPassword = this.LoginPwd.Password;
+            User user = UserManager.LogIn(loginName, loginPassword);
+            if(user !=null)
+            MessageBox.Show("Login "+loginName +" with Succesfully");
+            else
+                MessageBox.Show("failed to login !!");
         }
 
         private void RegisterAdminBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            string loginName = this.RegisterName.Text;
+            string loginPassword = this.RegisterPwd.Password;
+            
+
+            if (UserManager.RegisterAdmin(loginName, loginPassword))
+                MessageBox.Show("Register " + loginName + " as Admin with Successfuly");
+            else
+                MessageBox.Show("failed to register !!");
+
         }
 
         private void RegisterCustomerBtn_OnClickmerBtn_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            string loginName = this.RegisterName.Text;
+            string loginPassword = this.RegisterPwd.Password;
+            
+
+            if (UserManager.RegisterCustomer(loginName, loginPassword))
+                MessageBox.Show("Register " + loginName + " as Customer with Successfuly");
+            else
+                MessageBox.Show("failed to register !!");
         }
     }
 }

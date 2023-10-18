@@ -13,6 +13,7 @@ namespace Labb3Prog.DataModels.Users
 
         public Admin(string name, string password) : base(name, password)
         {
+            this.Type = UserTypes.Admin;
         }
 
     }
