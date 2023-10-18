@@ -1,0 +1,35 @@
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe.config
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.pdb
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.AssemblyReference.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\App.g.cs
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.lref
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.baml
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.g.resources
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.Properties.Resources.resources
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.GenerateResource.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.CoreCompileInputs.cache
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.exe
+C:\myWorkSpace\Freelance\C#\C15\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.pdb
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe.config
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.exe
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.pdb
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csprojResolveAssemblyReference.cache
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\LoginView.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\App.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.cache
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog_MarkupCompile.lref
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.exe
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\bin\Debug\Labb3Prog.pdb
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\MainWindow.baml
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\LoginView.baml
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.g.resources
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.Properties.Resources.resources
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Labb3Prog.csproj.GenerateResource.Cache
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\AdminView.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.g.cs
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\AdminView.baml
+D:\POSTE LRS\kamal\MyWorkSpace2023\WPF\myProject\Labb3Prog\Labb3Prog\obj\Debug\Views\ShopView.baml
