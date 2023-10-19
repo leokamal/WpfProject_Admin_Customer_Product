@@ -15,8 +15,8 @@ namespace Labb3Prog.Managers
     public static class ProductManager
     {
         private static List<Product> _products = new List<Product>();
-        public static List<Product> Products { get { return _products; } set { _products = value; } }
-        
+        public static IEnumerable<Product> Products => _products;
+
 
         // Skicka detta efter att produktlistan ändrats eller lästs in
         public  static  event Action ProductListChanged ;
@@ -66,7 +66,7 @@ namespace Labb3Prog.Managers
                 using (StreamReader reader = new StreamReader(productFilePath))
                 {
                     string productJson = await reader.ReadToEndAsync();
-                    ProductManager.Products = JsonConvert.DeserializeObject<List<Product>>(productJson) ?? new List<Product>();
+                   _products = JsonConvert.DeserializeObject<List<Product>>(productJson) ?? new List<Product>();
                 }
 
             }
