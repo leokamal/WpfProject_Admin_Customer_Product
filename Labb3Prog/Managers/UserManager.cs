@@ -82,7 +82,7 @@ namespace Labb3Prog.Managers
            if (user == null)
                 return null;
 
-            ChangeCurrentUser(user.Name, user.Password, user.Type);
+            ChangeCurrentUser(user.Name, user.ToString(), user.Type);
             CurrentUserChanged?.Invoke();
 
             return user;
