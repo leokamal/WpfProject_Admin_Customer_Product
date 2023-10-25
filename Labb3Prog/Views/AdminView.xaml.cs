@@ -30,7 +30,7 @@ namespace Labb3Prog.Views
             ProductManager.ProductListChanged += OnProductListChanged;
         }
 
-        private async void OnProductListChanged()
+        private void OnProductListChanged()
         {
             this.ProdList.ItemsSource = null;
             this.ProdList.ItemsSource = ProductManager.Products;
@@ -46,7 +46,7 @@ namespace Labb3Prog.Views
       //      MessageBox.Show(ProdList.SelectedItem.ToString());
         }
 
-        private async void SaveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void SaveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Products product = new Products(txtProduct.Text.ToString(),double.Parse(txtPrice.Text.ToString()));
             try
@@ -60,7 +60,7 @@ namespace Labb3Prog.Views
             }
 }
 
-        private async void RemoveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void RemoveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             //Check if we are not Select a product;
             if (this.ProdList.SelectedItem == null)

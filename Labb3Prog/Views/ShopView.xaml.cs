@@ -31,10 +31,8 @@ namespace Labb3Prog.Views
             
         }
 
-        private async void ProductManager_ProductListChanged()
+        private void ProductManager_ProductListChanged()
         {
-         //   await ProductManager.SaveProductsToFile();
-       //     await ProductManager.LoadProductsFromFile();
             this.ProdList.ItemsSource = null;
             this.ProdList.ItemsSource = ProductManager.Products;
         }
