@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labb3Prog.DataModels.Products
 {
-    public class Product
+    public abstract class Product
     {
         public string Name { get; set; }
 

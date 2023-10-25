@@ -26,11 +26,22 @@ namespace Labb3Prog.Views
         {
             InitializeComponent();
             UserManager.CurrentUserChanged += UserManager_CurrentUserChanged;
+            ProductManager.ProductListChanged += ProductManager_ProductListChanged;
             
             
         }
+
+        private async void ProductManager_ProductListChanged()
+        {
+         //   await ProductManager.SaveProductsToFile();
+       //     await ProductManager.LoadProductsFromFile();
+            this.ProdList.ItemsSource = null;
+            this.ProdList.ItemsSource = ProductManager.Products;
+        }
+
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
+            this.ProdList.ItemsSource = null;
             this.ProdList.ItemsSource = ProductManager.Products;
         }
         private void UserManager_CurrentUserChanged()

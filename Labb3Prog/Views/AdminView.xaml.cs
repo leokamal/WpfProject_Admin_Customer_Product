@@ -32,8 +32,7 @@ namespace Labb3Prog.Views
 
         private async void OnProductListChanged()
         {
-            await ProductManager.SaveProductsToFile();
-            await ProductManager.LoadProductsFromFile();
+            this.ProdList.ItemsSource = null;
             this.ProdList.ItemsSource = ProductManager.Products;
         }
 
@@ -49,10 +48,11 @@ namespace Labb3Prog.Views
 
         private async void SaveBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Product product = new Product(txtProduct.Text.ToString(),double.Parse(txtPrice.Text.ToString()));
+            Products product = new Products(txtProduct.Text.ToString(),double.Parse(txtPrice.Text.ToString()));
             try
             {
                 ProductManager.AddProduct(product);
+               
         }
             catch (Exception ex) 
             {

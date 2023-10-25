@@ -14,7 +14,8 @@ namespace Labb3Prog.Managers
 
     public static class ProductManager
     {
-        private static List<Product> _products = new List<Product>();
+        private static readonly List<Product> _products = new List<Product>();
+
         public static IEnumerable<Product> Products => _products;
 
 
@@ -23,18 +24,22 @@ namespace Labb3Prog.Managers
 
         public static void AddProduct(Product product)
         {
-            Product p = Products.Where(s => s.Name == product.Name && s.Price == product.Price).FirstOrDefault();
-            if (p != null)
-                throw new Exception("this product is already exist!");
-            _products.Add(product);
-            OnProductListChange();
+            if (product != null)
+            {
+                Product p = Products.Where(s => s.Name == product.Name && s.Price == product.Price).FirstOrDefault();
+                if (p != null)
+                    throw new Exception("this product is already exist!");
+
+                Products p1 = new Products(product.Name, product.Price);
+                _products.Add(p1);
+                ProductListChanged?.Invoke();
+            }
         }
-        public  static void OnProductListChange() =>ProductListChanged?.Invoke();
 
         public static void RemoveProduct(Product product)
         {
             _products.Remove(product);
-            OnProductListChange();
+            ProductListChanged?.Invoke();
         }
 
         public static async Task SaveProductsToFile()
@@ -66,7 +71,8 @@ namespace Labb3Prog.Managers
                 using (StreamReader reader = new StreamReader(productFilePath))
                 {
                     string productJson = await reader.ReadToEndAsync();
-                   _products = JsonConvert.DeserializeObject<List<Product>>(productJson) ?? new List<Product>();
+                    _products.Clear();
+                    _products.AddRange(JsonConvert.DeserializeObject<List<Products>>(productJson) ?? new List<Products>());
                 }
 
             }
