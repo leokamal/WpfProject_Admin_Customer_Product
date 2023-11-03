@@ -74,7 +74,7 @@ namespace Labb3Prog.Views
                 MessageBox.Show("Please Select One product in Product List to add");
                 return;
             }
-            double price = ProductManager.Products.Where(s => s.Name.Equals(selectedProduct.Split(' ')[0])).FirstOrDefault().Price;
+            double price = ProductManager.Products.Where(s => s.Name.StartsWith(selectedProduct.Split(' ')[0])).FirstOrDefault().Price;
 
             bool productFound = false;
             foreach (string item in CartList.Items)
