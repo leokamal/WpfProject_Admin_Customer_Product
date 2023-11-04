@@ -72,8 +72,9 @@ namespace Labb3Prog.Views
                 ProductManager.RemoveProduct(productSelected);
             }
 
-        private void LogoutBtn_Click(object sender, System.Windows.RoutedEventArgs e)
+        private async void LogoutBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+            await ProductManager.SaveProductsToFile();
             UserManager.LogOut();
         }
 
