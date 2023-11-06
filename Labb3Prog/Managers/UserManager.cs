@@ -15,7 +15,7 @@ namespace Labb3Prog.Managers
 {
     public static class UserManager
     {
-        private static readonly List<User> _users = new List<User>();
+        private static readonly IEnumerable<User> _users = new List<User>();
         private static User _currentUser;
 
         public static IEnumerable<User> Users => _users;
@@ -44,7 +44,7 @@ namespace Labb3Prog.Managers
             if (user != null)
                 return false;
 
-            _users.Add(new Admin(name, password));
+            ((List<User>)_users).Add(new Admin(name, password));
             UserListChanged?.Invoke();
 
             return true;
@@ -55,7 +55,7 @@ namespace Labb3Prog.Managers
             if (user != null)
                 return false;
 
-            _users.Add(new Customer(name, password));
+            ((List<User>)_users).Add(new Customer(name, password));
             UserListChanged?.Invoke();
 
             return true;
@@ -120,8 +120,8 @@ namespace Labb3Prog.Managers
                 using (StreamReader reader = new StreamReader(userFilePath))
                 {
                     string userJson = await reader.ReadToEndAsync();
-                    _users.Clear();
-                    _users.AddRange(JsonConvert.DeserializeObject<List<User>>(userJson, new UserConverter()) ?? new List<User>());
+                    ((List<User>)_users).Clear();
+                    ((List<User>)_users).AddRange(JsonConvert.DeserializeObject<List<User>>(userJson, new UserConverter()) ?? new List<User>());
                 }
 
             }

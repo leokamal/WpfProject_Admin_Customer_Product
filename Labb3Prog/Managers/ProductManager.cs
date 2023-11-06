@@ -14,7 +14,7 @@ namespace Labb3Prog.Managers
 
     public static class ProductManager
     {
-        private static readonly List<Product> _products = new List<Product>();
+        private static readonly IEnumerable<Product> _products = new List<Product>();
 
         public static IEnumerable<Product> Products => _products;
 
@@ -31,14 +31,14 @@ namespace Labb3Prog.Managers
                     throw new Exception("this product is already exist!");
 
                 Products p1 = new Products(product.Name, product.Price);
-                _products.Add(p1);
+                ((List<Product>)_products).Add(p1);
                 ProductListChanged?.Invoke();
             }
         }
 
         public static void RemoveProduct(Product product)
         {
-            _products.Remove(product);
+            ((List<Product>)_products).Remove(product);
             ProductListChanged?.Invoke();
         }
 
@@ -71,8 +71,8 @@ namespace Labb3Prog.Managers
                 using (StreamReader reader = new StreamReader(productFilePath))
                 {
                     string productJson = await reader.ReadToEndAsync();
-                    _products.Clear();
-                    _products.AddRange(JsonConvert.DeserializeObject<List<Products>>(productJson) ?? new List<Products>());
+                    ((List<Product>)_products).Clear();
+                    ((List<Product>)_products).AddRange(JsonConvert.DeserializeObject<List<Products>>(productJson) ?? new List<Products>());
                 }
 
             }
